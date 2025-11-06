@@ -46,3 +46,16 @@ where id = 6;
 select * from class where id =7;
 
 select * from class;
+
+update class
+set address = 'goa'
+where id = 4;
+
+select * from class;
+update class set address ='banglore' where id =9;
+update class set address= 'delhi' where id =6;
+update class set department='powerbi' where id in(3,7,11);
+select *from class;
+delete from class
+where id=6;
+select *from class;
