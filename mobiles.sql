@@ -30,8 +30,27 @@ update mobiles set cities = 'pune' where id = 5;
 select * from mobiles;
 desc mobiles;
 
+select * from mobiles order by brand;
+select * from mobiles order by price;
 
+insert into mobiles values
+(6, 'oppo', 23000, 12, 104, 'pune'),
+(7, 'oneplus', 24000, 11, 107, 'chennai'),
+(8, 'vivo', 25000, 13, 95, 'hyderabad'),
+(9, 'realme', 22000, 12, 101, 'banglore'),
+(10, 'nothing', 21000, 11, 109, 'chennai');
+select * from mobiles;
 
+select brand, count(*) as total_count from mobiles group by  brand;
+select max(price) as max_price from mobiles;
+select min(price) as min_price from mobiles;
+
+select * from mobiles where price  > 21000 ;
+select version, count(*) as total_count from mobiles group by version;
+
+select sum(purchase) as total_purchase from mobiles;
+select brand, sum(purchase) as total_purchase from mobiles group by brand;
+select brand, avg(price) as avg_price from mobiles group by brand;
 
 
 
