@@ -52,5 +52,11 @@ select sum(purchase) as total_purchase from mobiles;
 select brand, sum(purchase) as total_purchase from mobiles group by brand;
 select brand, avg(price) as avg_price from mobiles group by brand;
 
+select brand, sum(price) as total_price
+from mobiles
+group by brand
+having sum(price) >= 20000;
+
+
 
 
